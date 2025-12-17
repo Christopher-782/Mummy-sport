@@ -555,8 +555,18 @@ footer {
     padding-top: 130px;
   }
 }
+@media (max-width: 900px) {
+  .hero-updated {
+    background-position: center;
+    padding: 60px 8%;
+  }
 
-@media (min-width: 768px) and (max-width: 1221px) {
+  .hero-updated::before {
+    background: rgba(255, 255, 255, 0.92);
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1221px) {
   .mobile-toggle {
     display: block;
   }
@@ -629,7 +639,31 @@ footer {
   }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 200px) and (max-width: 896px) {
+  .mobile-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
   h1 {
     font-size: 2rem;
   }
